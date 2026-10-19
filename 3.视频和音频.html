@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>视频标签</h2>
+  <!-- 自动播放autoplay  循环loop  静音muted  控制controls  预览封面poster -->
+  <video src="/media/kdlk.mp4" width="600px" controls></video>
+  <video src="/media/kdlk.mp4" width="600px" controls poster='./img/2.jpg'></video>
+  <video controls autoplay width="600">
+    <source src="/media/kdlk.mp4" type="video/mp4">
+    <p>您的浏览器不支持播放该视频，请升级浏览器或使用其他浏览器</p>
+  </video>
+  <video src="/media/kdlk.mp4" width="600px" controls autoplay loop></video>
+
+
+  <h2>音频标签</h2>
+  <audio controls>
+    <source src="./media/爱的故事上集.mp3" type="audio/mp3">
+    <p>您的浏览器不支持播放该音频，请升级浏览器或使用其他浏览器</p>
+  </audio>
+
+</body>
+
+</html>
