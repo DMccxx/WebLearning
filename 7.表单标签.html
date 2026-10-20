@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表单标签</title>
+</head>
+
+<body>
+  <!-- 表单容器，包裹所有表单控件 -->
+  <form action="">
+    <!-- 1.单行文本框和密码框 -->
+    <ul>
+      <li>
+        账号：<input type="text" placeholder="请输入账号" name="username" autocomplete="off">
+      </li>
+      <li>
+        密码：<input type="password" placeholder="请输入密码" name="pwd" autocomplete="off">
+      </li>
+      <!-- 2.单选框和复选框和文件域 -->
+      <li>
+        性别：
+        <!-- label for -->
+        <input type="radio" name="gender" id="nan" checked value="1">
+        <label for="nan">男</label>
+        <input type="radio" name="gender" id="nv" value="0">
+        <label for="nv">女</label>
+      </li>
+      <li>
+        爱好：
+        <label>
+          <input type="checkbox" name="hobby" value="0">唱歌
+        </label>
+        <label>
+          <input type="checkbox" name="hobby" value="1">跳舞
+        </label>
+        <label>
+          <input type="checkbox" name="hobby" value="2">rap
+        </label>
+        <label>
+          <input type="checkbox" name="hobby" value="3">打篮球
+        </label>
+      </li>
+      <li>
+        头像：
+        <input type="file" multiple name="file" accept=".jpg">
+      </li>
+      <!-- 3.文本域和下拉表单控件 -->
+      <li>
+        留言：
+        <textarea name="msg" placeholder="请输入留言"></textarea>
+      </li>
+      <li>
+        住址：
+        <select name="addr">
+          <option value="北京">北京</option>
+          <option value="上海">上海</option>
+          <option value="广州" selected>广州</option>
+          <option value="深圳">深圳</option>
+        </select>
+      </li>
+      <li>
+        <button disabled>登录</button>
+      </li>
+    </ul>
+    我是&nbsp;&nbsp;蔡&nbsp;&nbsp;&nbsp;徐&nbsp;&nbsp;&nbsp;&nbsp;坤
+  </form>
+</body>
+
+</html>
