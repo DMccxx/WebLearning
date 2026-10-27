@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 链接伪类选择器 */
+    a:link {
+      color: aqua;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: rgb(255, 208, 0);
+
+    }
+
+    a:hover {
+      color: rgb(255, 0, 0);
+      text-decoration: underline;
+    }
+
+    a:active {
+      color: rgb(13, 0, 128);
+    }
+
+    /* 用户行为（动态）伪类选择器 */
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    .box:hover {
+      background-color: aqua;
+      color: red;
+    }
+
+    .search:focus {
+      width: 200px;
+      height: 30px;
+      background-color: aqua;
+    }
+
+    /* 结构伪类选择器 */
+    /* 选择第一个元素变色 */
+    .ul1 li:first-child {
+      color: red;
+    }
+
+    /* 选择最后一个元素变色 */
+    .ul1 li:last-child {
+      color: red;
+    }
+
+    /* 选择第n个元素变色 */
+    .ul1 li:nth-child(8) {
+      color: red;
+    }
+
+    /* 选择前4个元素变色 */
+    .ul1 li:nth-child(-n+4) {
+      color: rgb(43, 255, 0);
+    }
+
+    /* 选择第奇数个元素变色 */
+    .ul2 li:nth-child(odd) {
+      color: red;
+    }
+
+    /*选择第偶数个元素变色 */
+    .ul2 li:nth-child(even) {
+      color: rgb(0, 255, 55);
+    }
+
+    /* 选择第5个元素之后的元素变色 */
+    .ul2 li:nth-child(n+5) {
+      color: rgb(119, 0, 255);
+    }
+
+    /* 选择3的倍数元素变色 */
+    .ul2 li:nth-child(3n) {
+      color: rgb(255, 0, 149);
+    }
+
+    /* 表格单元格边框合并 */
+    table {
+      border-collapse: collapse;
+    }
+
+    table,
+    td {
+      border: 1px solid black;
+    }
+
+    button {
+      width: 200px;
+      height: 50px;
+      background-color: #ff6900;
+      border: none;
+      color: white;
+    }
+
+    /* 表单禁用伪类选择器 */
+    button:disabled {
+      opacity: 0.4;
+    }
+
+    /* 复选框选中状态伪类选择器 */
+    input:checked+label {
+      color: #ff6900;
+    }
+
+    /* 伪元素选择器*/
+    p::first-line {
+      color: #ff6900;
+    }
+
+    p::first-letter {
+      color: #ff0000;
+      font-size: 30px;
+    }
+
+    textarea::placeholder {
+      color: aqua;
+    }
+
+    div::before {
+      content: "唱跳";
+      color: #ff6900;
+    }
+
+    div::after {
+      content: "篮球";
+      color: rgb(0, 255, 157);
+    }
+
+    /* 属性选择器 */
+    input[type="text"],
+    input[type="password"] {
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="deepseek1.com">deepseek</a>
+  <a href="#">产品介绍</a>
+  <a href="#">联系方式</a>
+  <div class="box">文字</div>
+  <input type="text" class="search">
+  <div class="ul1">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+    </ul>
+  </div>
+  <div class="ul2">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+    </ul>
+  </div>
+  <table>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+  </table>
+  <br>
+  <button disabled>注册</button>
+  <br>
+  <input type="checkbox" id="agree">
+  <label for="agree">同意注册协议</label>
+  <p>我是个人练习生蔡徐坤，喜欢唱跳rap篮球 我是个人练习生蔡徐坤，喜欢唱跳rap篮球
+    我是个人练习生蔡徐坤，喜欢唱跳rap篮球我是个人练习生蔡徐坤，喜欢唱跳rap篮球我是个人练习生蔡徐坤，喜欢唱跳rap篮球我是个人练习生蔡徐坤，喜欢唱跳rap篮球</p>
+
+  <textarea name="" id="" placeholder="请留下您的评论"></textarea>
+  <div>rap</div>
+  <input type="text">
+  <br>
+
+  <input type="password">
+</body>
+
+</html>
