@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 1500px;
+    }
+
+    .box {
+      width: 400px;
+      height: 400px;
+      background-color: aqua;
+      /* 背景图片 */
+      background-image: url(./案例/img/ldh.png);
+      /* 背景平铺 */
+      background-repeat: no-repeat;
+      /* background-repeat: repeat-x; */
+      /* 背景位置 两个值，第一个是x轴，第二个是y轴，y轴省略的话默认是center */
+      /* background-position: 50% 50%; */
+      /* background-position: center; */
+      /* background-position: 10px; */
+      /* 背景缩放 */
+      /* background-size: 100% 100%; */
+      /*覆盖*/
+      /* background-size: cover; */
+      /*包含*/
+      /* background-size: contain; */
+
+
+      /* 背景固定 默认值是scroll  fixed是相对当前视口的*/
+      background-attachment: fixed;
+
+
+    }
+
+    .box1 {
+      width: 400px;
+      height: 400px;
+      background: pink url(./案例/img/ldh.png) no-repeat center/100% 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">123</div>
+  <div class="box1">33333</div>
+</body>
+
+</html>

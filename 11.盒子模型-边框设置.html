@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 上下外边距会叠加，以最大的为准 */
+    div[class*="box"] {
+      width: 200px;
+      height: 200px;
+      margin: 20px;
+      box-sizing: border-box;
+    }
+
+    .box1 {
+      border: 2px solid red;
+    }
+
+    .box2 {
+      border: 2px dashed red;
+    }
+
+    .box3 {
+      border: 2px dotted red;
+    }
+
+    .box4 {
+      border-top: 1px solid #000;
+      border-bottom: 1px dashed blue;
+      border-left: 2px dotted green;
+      border-right: 3px solid aqua;
+    }
+
+    .box5 {
+      border: 1px solid rgb(192, 188, 188);
+      border-top: 3px solid #ff6900;
+    }
+
+    .radius1 {
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+      border-radius: 50%;
+    }
+
+    .radius2 {
+      width: 100px;
+      height: 50px;
+      border-radius: 25px;
+    }
+
+    .jia {
+
+      border-radius: 50%;
+    }
+
+    .radius3 {
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+      border-radius: 30px 40px 10px;
+    }
+
+    .xhd {
+      border-radius: 12px 0;
+      border: 2px solid aqua;
+    }
+
+    .bo {
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+      margin: auto;
+      text-align: center;
+      line-height: 200px;
+    }
+
+    /* 嵌套盒子会发生坍塌 */
+    .father {
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+      margin: 20px auto;
+      box-sizing: border-box;
+      /* 想让son与father盒子有间隙，需要给father
+      1.设置padding 
+      2.或者添加border 
+      3/或添加overflow:hidden */
+      /* padding-top: 20px; */
+      /* border: 1px solid rgb(68, 0, 255); */
+      /* overflow: hidden; */
+
+    }
+
+    .son {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      /* margin: 20px; */
+      margin: auto;
+      box-sizing: border-box;
+      border: 5px solid rgb(68, 0, 255);
+
+
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="box1">实线边框</div>
+  <div class="box2">虚线边框</div>
+  <div class="box3">点线边框</div>
+  <div class="box4">不同边框1</div>
+  <div class="box5">不同边框2</div>
+  <div class="radius1">圆角</div>
+  <button class="radius2">胶囊按钮</button>
+  <img src="./案例/img/w1.webp" alt="反甲" class="jia">
+  <div class="radius3"></div>
+  <img src="./案例/img/w3.webp" alt="" class="xhd">
+  <div class="bo">盒子</div>
+  <div class="father">
+    <div class="son"></div>
+  </div>
+</body>
+
+</html>
